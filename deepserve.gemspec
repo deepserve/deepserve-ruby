@@ -7,7 +7,19 @@ Gem::Specification.new do |s|
   s.authors     = ["Jeff Wells"]
   s.email       = 'jeff@deepserve.ai'
   s.files       = ["lib/deepserve.rb"]
-  s.homepage    =
-    'https://rubygems.org/gems/deepserve'
+  s.homepage    = 'https://rubygems.org/gems/deepserve'
+
+  s.add_runtime_dependency 'rest-client', '~> 2.1'
+  s.add_runtime_dependency 'graphql-client', '~> 2.1'
+  gem 'graphql-client'
+
+
+  s.add_development_dependency('rspec', '~> 3.0')
+  s.add_development_dependency('pry', '~> 0')
+  s.add_development_dependency('pry-doc', '~> 0')
+  s.add_development_dependency('rdoc', '>= 2.4.2', '< 6.0')
+  s.add_development_dependency('rubocop', '~> 0.49')
+
+  s.required_ruby_version = '>= 2.0.0'
   s.license       = 'MIT'
 end
